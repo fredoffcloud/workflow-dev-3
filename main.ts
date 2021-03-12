@@ -49,6 +49,8 @@ function createWindow(): BrowserWindow {
     // when you should delete the corresponding element.
     win = null;
   });
+  win.webContents.openDevTools();
+
 
   return win;
 }

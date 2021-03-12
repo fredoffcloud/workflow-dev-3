@@ -1,5 +1,5 @@
 {
-  "productName": "angular-electron",
+  "productName": "workflow-dev-3",
   "directories": {
     "output": "release/"
   },
@@ -28,7 +28,8 @@
   "mac": {
     "icon": "dist/assets/icons",
     "target": [
-      "dmg"
+      "dmg",
+      "zip"
     ]
   },
   "linux": {

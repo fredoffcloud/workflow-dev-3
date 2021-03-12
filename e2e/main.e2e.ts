@@ -3,7 +3,7 @@ import { SpectronClient } from 'spectron';
 
 import commonSetup from './common-setup';
 
-describe('angular-electron App', function () {
+describe('workflow-dev-3 App', function () {
 
   commonSetup.apply(this);
 
