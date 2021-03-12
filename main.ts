@@ -1,6 +1,8 @@
-import { app, BrowserWindow, screen } from 'electron';
+import { app, BrowserWindow, screen, IpcMain } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
+
+// import * as updateApp from 'update-electron-app';
 
 let win: BrowserWindow = null;
 const args = process.argv.slice(1),
@@ -60,7 +62,19 @@ try {
   // initialization and is ready to create browser windows.
   // Some APIs can only be used after this event occurs.
   // Added 400 ms to fix the black background issue while using transparent window. More detais at https://github.com/electron/electron/issues/15947
-  app.on('ready', () => setTimeout(createWindow, 400));
+  app.on('ready', () => 
+    {
+      setTimeout(createWindow, 400);
+      let updateApp = require('update-electron-app');
+    
+      updateApp({
+          // repo: 'fredoffcloud/electron-hello-world', // defaults to package.json
+          updateInterval: '5 minutes',
+          notifyUser: true
+      });
+    
+    }
+  );
 
   // Quit when all windows are closed.
   app.on('window-all-closed', () => {

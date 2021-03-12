@@ -1,7 +1,7 @@
 {
   "name": "workflow-dev-3",
   "productName": "workflow-dev-3",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular 11 with Electron (Typescript + SASS + Hot Reload)",
   "repository": "https://github.com/fredoffcloud/workflow-dev-3",
   "homepage": "https://github.com/maximegris/workflow-dev-3",
@@ -44,7 +44,9 @@
     "version": "conventional-changelog -i CHANGELOG.md -s -r 0 && git add CHANGELOG.md",
     "lint": "ng lint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "update-electron-app": "2.0.1"
+  },
   "devDependencies": {
     "@angular-builders/custom-webpack": "11.0.0",
     "@angular-devkit/build-angular": "0.1102.0",
